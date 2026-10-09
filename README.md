@@ -38,7 +38,7 @@
   Android + iOS. It simulates login, accounts, transactions, and bill pay, and is instrumented
   with GA4 (via Firebase Analytics): `page_view`, `report_download`, `filter_applied`,
   transaction events, device/channel, and session data. It never touches HSBC's real app or site.
-- **App 2 — analytics & prediction platform (the star).** A Streamlit/React frontend + FastAPI
+- **App 2 — analytics & prediction platform (the star).** A React + Vite frontend + FastAPI
   backend product with GA4-style visualizations, natural-language → BigQuery querying,
   AI-generated reports, Excel/PDF export, and all 7 prediction modules.
 
@@ -129,13 +129,13 @@ All methods are grounded in research (see [references](#research-references)).
 
 ### App 2 — analytics & prediction platform (the star)
 
-- **Frontend:** Streamlit / React + Vite (Python-native dashboards, charts, chat input).
+- **Frontend:** React + Vite (SPA dashboards, charts, NL query box).
 - **Backend:** FastAPI (Python) — holds GCP credentials, validates all SQL.
 - Pulls together everything: GA4-style visualizations, NL→SQL, AI reports, Excel/PDF export,
   and all 7 prediction modules.
 
 ```
-App 2 FRONTEND (Streamlit / React)
+App 2 FRONTEND (React + Vite)
   • GA4-style dashboard (cards, line/bar/pie, geo, funnel, cohort, realtime)
   • NL query box: question -> see SQL -> see chart
   • Prediction views (all 7 modules)
@@ -180,7 +180,7 @@ DATA SOURCES
                      ▼
          App 2 BACKEND (FastAPI)  —  NL→SQL + SqlGuard, /query /forecast /report
                      ▼
-         App 2 FRONTEND (Streamlit / React) — dashboard · ask · predictions · reports
+         App 2 FRONTEND (React + Vite) — dashboard · ask · predictions · reports
 ```
 
 **Component map:**
@@ -194,7 +194,7 @@ DATA SOURCES
 | Warehouse | BigQuery / SQLite | `bigquery/` |
 | Models (9) | statsmodels, Prophet, LightGBM, scipy/PuLP, arch | `modelling/` |
 | Backend | FastAPI + Gemini | `app2_analytics_platform/backend/` |
-| Frontend | Streamlit / React + Plotly | `app2_analytics_platform/frontend/`, `app2_analytics_platform/web/` |
+| Frontend | React + Vite + Plotly | `app2_analytics_platform/web/` |
 
 **Dual-mode warehouse:** `bigquery/config.py` detects credentials. No creds → a local SQLite
 mirror with the same `dataset.table` names; with `.env` creds → real BigQuery. No code changes
@@ -254,8 +254,8 @@ Standardised quarterly tables (same structure each quarter → loadable). Recent
 FinLens/
 ├── app1_banking_clone/     # Flutter: web+Android+iOS, GA4-instrumented  [data source]
 ├── app2_analytics_platform/
-│   ├── frontend/           # Streamlit: dashboard + NL query + reports + export
-│   ├── web/                # React + Vite dashboard (LAN-exposed dev server)
+│   ├── web/                # React + Vite SPA: dashboard + NL query + reports + export
+│   ├── frontend/           # legacy Streamlit prototype (superseded by web/)
 │   └── backend/            # FastAPI: NL→SQL, validation, BigQuery, forecasts, reports
 ├── scrapers/               # Playwright+BS4 Data Pack finder; yfinance market data
 ├── parsers/                # pandas / camelot / pdfplumber → tidy tables
