@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* thin scrollbars */
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-card p-5 transition-shadow;
+  }
+  .card:hover { @apply shadow-cardhover; }
+  .pill {
+    @apply inline-flex items-center text-xs font-medium px-2.5 py-1 rounded-full;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5
+           font-semibold text-sm transition-colors disabled:opacity-50;
+  }
+  .btn-primary { @apply btn bg-hsbc-red text-white hover:bg-red-700; }
+  .btn-ghost { @apply btn bg-gray-100 text-gray-700 hover:bg-gray-200; }
+}

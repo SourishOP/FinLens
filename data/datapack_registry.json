@@ -1,0 +1,32 @@
+{
+  "4Q2024": {
+    "quarter": "4Q2024",
+    "period_end": "2024-12-31",
+    "segments": "legacy",
+    "url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/annual/pdfs/hsbc-holdings-plc/sea-250219-4q-2024-data-pack.pdf",
+    "local_path": "C:\\Users\\dasso\\OneDrive\\Desktop\\HSBC\\data\\downloads\\sea-250219-4q-2024-data-pack.pdf",
+    "sha256": "725e9278df6eacc97e98928337e3127be85b97fa8dbe995c84c2e1d6ecf1550d",
+    "content_type": "application/pdf",
+    "bytes": 674108
+  },
+  "2Q2024": {
+    "quarter": "2Q2024",
+    "period_end": "2024-06-30",
+    "segments": "legacy",
+    "url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/interim/pdfs/hsbc-holdings-plc/sea-240731-hsbc-holdings-plc-interim-results-2024-data-pack-2q-2024-announcement.pdf",
+    "local_path": "C:\\Users\\dasso\\OneDrive\\Desktop\\HSBC\\data\\downloads\\sea-240731-hsbc-holdings-plc-interim-results-2024-data-pack-2q-2024-announcement.pdf",
+    "sha256": "8925d1e2f0fe1a639199c7e9feb785fef2405cdb47823613e3eb312c3c4710e2",
+    "content_type": "application/pdf",
+    "bytes": 654907
+  },
+  "1Q2024": {
+    "quarter": "1Q2024",
+    "period_end": "2024-03-31",
+    "segments": "legacy",
+    "url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/1q/pdfs/hsbc-holdings-plc/240430-e-1q-2024-data-pack.pdf",
+    "local_path": "C:\\Users\\dasso\\OneDrive\\Desktop\\HSBC\\data\\downloads\\240430-e-1q-2024-data-pack.pdf",
+    "sha256": "097d670529af274d3fff131ed2cec07b25f8a19a5c4d29614faff9638edc6487",
+    "content_type": "application/pdf",
+    "bytes": 821910
+  }
+}
